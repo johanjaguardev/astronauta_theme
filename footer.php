@@ -11,8 +11,9 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
+	<footer id="colophon" class="site-footer footer">
+		<div class="footer__nav"></div>
+		<div class="footer__info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'astronauta' ) ); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */

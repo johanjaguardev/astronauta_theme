@@ -15,7 +15,7 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<div class="slider">
 
 		<?php
 		if ( have_posts() ) :
@@ -49,9 +49,21 @@ get_header();
 
 		endif;
 		?>
+	</div>
+	<div class="noticias">
 
-	</main><!-- #main -->
+	</div>
+	<div class="descripcion">
 
+	</div>
+	<div class="vision">
+
+	</div>
+	<div class="servicios">
+
+	</div>		
+	<div class="faq"></div>
+	
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();
