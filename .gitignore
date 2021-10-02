@@ -25,3 +25,5 @@ node_modules/
 # programmer files env
 .eslintrc
 .stylelintrc.json
+dev-assets/
+.DS_Store
