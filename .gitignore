@@ -22,6 +22,11 @@ node_modules/
 *.sql
 *.sqlite
 
+# sass files
+scss/
+*.map
+*.scss
+
 # programmer files env
 .eslintrc
 .stylelintrc.json
