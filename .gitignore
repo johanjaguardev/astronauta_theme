@@ -21,3 +21,7 @@ node_modules/
 *.log
 *.sql
 *.sqlite
+
+# programmer files env
+.eslintrc
+.stylelintrc.json
