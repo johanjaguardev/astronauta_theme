@@ -12,7 +12,7 @@
 ?>
 
 	<footer id="colophon" class="site-footer footer">
-		<div class="footer__nav"></div>
+		<div class="footer__nav">Aqui va un menu de footer</div>
 		<div class="footer__info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'astronauta' ) ); ?>">
 				<?php

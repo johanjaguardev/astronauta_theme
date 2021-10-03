@@ -969,10 +969,18 @@ textarea {
 }
 
 .header {
-  background-color: magenta;
+  background-color: rgba(56, 140, 111, 0.7);
 }
 
 .header__top {
+  background-color: #92D345;
+}
+
+.footer__nav {
+  background-color: #388C6F;
+}
+
+.footer__info {
   background-color: #92D345;
 }
 /*# sourceMappingURL=style.css.map */

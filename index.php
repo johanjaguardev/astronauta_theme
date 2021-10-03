@@ -15,7 +15,7 @@
 get_header();
 ?>
 
-	<div class="slider">
+	<div class="hero">
 
 		<?php
 		if ( have_posts() ) :
