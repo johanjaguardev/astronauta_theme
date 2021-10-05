@@ -1086,9 +1086,7 @@ textarea {
 .hero {
   background-size: cover;
   height: 750px;
-  position: absolute;
-  top: 40px;
-  left: 0;
+  position: relative;
   width: 100%;
   z-index: 1;
 }

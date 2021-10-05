@@ -13,30 +13,9 @@
  */
 
 get_header();
-?>
-
-	<div class="hero hero-home">
-		<div class="container">
-
-		</div>
-
-	</div>
-	<div class="noticias">
-		<div class="container"></div>
-	</div>
-	<div class="descripcion">
-		<div class="container"></div>
-	</div>
-	<div class="vision">
-		<div class="container"></div>
-	</div>
-	<div class="servicios">
-		<div class="container"></div>
-	</div>		
-	<div class="faq">
-		<div class="container"></div>
-	</div>
-	
-<?php
+$contentParts = array('hero', 'noticias', 'descripcion', 'vision', 'servicios', 'faq');
+foreach ($contentParts as &$part) {
+	get_template_part('template-parts/content', $part);
+};
 // get_sidebar();
 get_footer();
