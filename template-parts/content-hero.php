@@ -2,6 +2,6 @@
   <div class="container">
     <h2>¿CÓMO ME CERTIFICO HALAL?</h2>
     <a href="#">CONOCER MÁS</a>
-    <img class="hero__coin" src="<?php bloginfo('template_directory'); ?>/assets/coin.png" />
+    <img class="hero__coin" src="<?php bloginfo('template_directory'); ?>/assets/coin.png" alt="Halal Coin">
   </div>
 </div>
