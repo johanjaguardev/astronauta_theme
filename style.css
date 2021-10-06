@@ -1206,6 +1206,8 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   height: 800px;
+  position: relative;
+  z-index: 2;
 }
 
 .descripcion .container {
@@ -1243,6 +1245,44 @@ textarea {
 
 .descripcion__contenido p {
   color: #595959;
+  font-size: 2em;
+}
+
+.vision {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(assets/bg-vision.png);
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 1000px;
+  margin-top: -5em;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.vision .container {
+  padding: 5em;
+}
+
+.vision h2 {
+  color: #ffffff;
+  font-size: 4.5em;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.vision span {
+  color: #A8C948;
+}
+
+.vision p {
+  color: #ffffff;
   font-size: 2em;
 }
 
