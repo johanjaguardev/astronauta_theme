@@ -1,0 +1,25 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/user/public_html/dev/wp-content/themes/astronauta-g/
+    - /bin/cp 404.php $DEPLOYPATH
+    - /bin/cp archive.php $DEPLOYPATH
+    - /bin/cp comments.php $DEPLOYPATH
+    - /bin/cp footer.php $DEPLOYPATH
+    - /bin/cp functions.php $DEPLOYPATH
+    - /bin/cp header.php $DEPLOYPATH
+    - /bin/cp index.php $DEPLOYPATH
+    - /bin/cp page.php $DEPLOYPATH
+    - /bin/cp screenshot.png $DEPLOYPATH
+    - /bin/cp search.php $DEPLOYPATH
+    - /bin/cp sidebar.php $DEPLOYPATH
+    - /bin/cp single.php $DEPLOYPATH
+    - /bin/cp style.css $DEPLOYPATH
+    - /bin/cp 404.php $DEPLOYPATH
+    - /bin/cp 404.php $DEPLOYPATH
+    - /bin/cp style.css $DEPLOYPATH
+    - /bin/cp -R assets $DEPLOYPATH
+    - /bin/cp -R inc $DEPLOYPATH
+    - /bin/cp -R js $DEPLOYPATH
+    - /bin/cp -R languages $DEPLOYPATH
+    - /bin/cp -R template-parts $DEPLOYPATH
