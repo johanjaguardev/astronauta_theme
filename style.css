@@ -1287,7 +1287,7 @@ textarea {
 }
 
 .servicios {
-  padding: 10em 0;
+  padding: 10em 0 5em 0;
 }
 
 .servicios h2 {
@@ -1358,6 +1358,73 @@ textarea {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 6em;
+}
+
+.faq {
+  padding: 0 0 10em 0;
+}
+
+.faq h3 {
+  color: #ffffff;
+  font-size: 3em;
+  font-weight: 300;
+}
+
+.faq p {
+  color: #ffffff;
+  font-size: 2em;
+  font-weight: 400;
+}
+
+.faq a {
+  background-color: #F08437;
+  border-radius: 20px;
+  color: #ffffff;
+  font-size: 2.5em;
+  font-weight: 700;
+  margin: 10px 0;
+  padding: 5px 40px;
+  text-decoration: none;
+}
+
+.faq__bg {
+  background: #A8C948;
+  background: -webkit-gradient(linear, left top, right top, from(#A8C948), to(#087878));
+  background: linear-gradient(90deg, #A8C948 0%, #087878 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$faq-bg-1,endColorstr=$faq-bg-2,GradientType=1);
+  border-radius: 5em;
+  height: 30em;
+  margin-top: -30em;
+  position: relative;
+  z-index: 1;
+}
+
+.faq__content {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  background-image: url(assets/faq.png);
+  background-position-y: 50px;
+  background-repeat: no-repeat;
+  border-radius: 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 41em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.faq__info {
+  width: 50%;
+  padding-bottom: 5em;
 }
 
 .footer__nav {
