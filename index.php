@@ -17,5 +17,4 @@ $contentParts = array('hero', 'noticias', 'descripcion', 'vision', 'servicios', 
 foreach ($contentParts as &$part) {
 	get_template_part('template-parts/content', $part);
 };
-// get_sidebar();
-// get_footer();
+get_footer();

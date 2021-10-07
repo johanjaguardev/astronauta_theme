@@ -1083,6 +1083,62 @@ textarea {
   opacity: 0.7;
 }
 
+.header__nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 30px;
+}
+
+.header__search {
+  height: 30px;
+  position: relative;
+}
+
+.header__search input[type="search"] {
+  border: none;
+  border-radius: 15px;
+  margin: 0;
+  padding: 0.1em 1.2em;
+  width: 290px;
+}
+
+.header__search input[type="search"]::-webkit-input-placeholder {
+  color: #087878;
+}
+
+.header__search input[type="search"]:-ms-input-placeholder {
+  color: #087878;
+}
+
+.header__search input[type="search"]::-ms-input-placeholder {
+  color: #087878;
+}
+
+.header__search input[type="search"]::placeholder {
+  color: #087878;
+}
+
+.header__search form {
+  margin-bottom: 0;
+}
+
+.header__search .widget_search {
+  margin-bottom: 0;
+}
+
+.header__search-icon {
+  position: absolute;
+  right: 15px;
+  top: 0;
+}
+
 .hero {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1429,10 +1485,151 @@ textarea {
 
 .footer__nav {
   background-color: #087878;
+  padding: 5em 0;
 }
 
 .footer__info {
   background-color: #A8C948;
+  padding: 3em 0;
+}
+
+.footer__info p {
+  color: #ffffff;
+  font-size: 1.3em;
+  font-weight: 500;
+  margin: 0.2em 0;
+}
+
+.footer__info .container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.footer__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer__menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style-type: none;
+  margin: 0;
+  padding: 0em;
+  width: 100%;
+}
+
+.footer__menu li {
+  padding: 0;
+}
+
+.footer__menu a {
+  color: #ffffff;
+  font-size: 1.3em;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.footer__menu ul .sub-menu {
+  margin-top: 1em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer__menu ul .sub-menu li {
+  padding: 0.3em 0;
+}
+
+.footer__menu ul .sub-menu a {
+  font-size: 1.1em;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+
+.footer__social {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-weight: normal;
+  font-style: normal;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 400px;
+}
+
+.footer__icon {
+  margin: 0 10px 0 0;
+  -webkit-transition: opacity ease-in .3s;
+  transition: opacity ease-in .3s;
+}
+
+.footer__icon svg {
+  fill: #ffffff;
+}
+
+.footer__icon:hover, .footer__icon:focus {
+  opacity: 0.7;
+}
+
+.footer__email, .footer__phone {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 1.3em;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.footer__email a, .footer__phone a {
+  color: #ffffff;
+  margin: 0.5em 0;
+  text-decoration: none;
+}
+
+.footer__email-ico, .footer__phone-ico {
+  padding-right: 10px;
 }
 
 body {
