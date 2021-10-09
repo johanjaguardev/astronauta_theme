@@ -10,7 +10,8 @@
  */
 
 ?>
-
+	<div><strong>Current template:</strong><?php global $template; echo basename($template); ?>
+ </div>
 	<footer id="colophon" class="site-footer footer">
 		<div class="footer__nav">
 			<div class="container">

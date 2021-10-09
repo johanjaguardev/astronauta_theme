@@ -179,3 +179,31 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * function to show what is the current template
+ */
+add_action('wp_head', 'show_template');
+function show_template() {
+    global $template;
+    echo basename($template);
+}
+
+
+/**
+ * function to add support of Guttenberg in the theme
+ */
+add_action('after_setup_theme', 'addGuttenbergStyles');
+function addGuttenbergStyles() {
+	add_theme_support('editor-styles');
+	add_editor_Style('style.css');
+	add_editor_style( 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap' );
+}
+
+/**
+ * function to add the google font to the theme
+ */
+
+add_action( 'enqueue_block_editor_assets', 'add_google_fonts' );
+function add_google_fonts() {
+	wp_enqueue_style( 'google_web_fonts', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap' );
+}
