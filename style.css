@@ -1865,4 +1865,55 @@ media queries contrains
   left: -1em;
   position: absolute;
 }
+
+.wp-block-column.segmentos h2 {
+  font-size: 4em;
+  padding: 0 3em;
+}
+
+.wp-block-column.segmentos ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.wp-block-column.segmentos ul li {
+  color: #087878;
+  font-size: 1.6rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.wp-block-column.segmentos ul li::before {
+  content: '>';
+  color: #a8c948;
+  left: -1em;
+  position: absolute;
+}
+
+.wp-block-column.segmentos ul > li > ul {
+  margin-left: 1em;
+}
+
+.wp-block-column.segmentos ul > li > ul li::before {
+  display: none;
+}
+
+.wp-block-column.segmentos-izquierda {
+  margin-left: -10em;
+}
+
+.wp-block-column.segmentos-derecha {
+  background-color: #EDEDED;
+  border-radius: 4em;
+  margin-left: 1em;
+  max-width: 40%;
+  padding: 3em 4em 3em 5em;
+  -webkit-transform: translateX(-10em);
+          transform: translateX(-10em);
+}
+
+.wp-block-column.segmentos-derecha h2 {
+  padding: 0;
+}
 /*# sourceMappingURL=style.css.map */
