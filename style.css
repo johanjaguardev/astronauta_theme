@@ -1000,7 +1000,7 @@ h2 {
   font-size: 6em;
   font-weight: 300;
   line-height: 1;
-  margin: 1.2em 0 0.5em 0;
+  margin: 0.5em 0 0.5em 0;
 }
 
 h5 {
@@ -1012,6 +1012,11 @@ a, pre, p, table, div, input, textarea, label, button {
   color: #595959;
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
+}
+
+p {
+  font-size: 1.8em;
+  font-weight: 400;
 }
 
 .container {
@@ -1753,14 +1758,6 @@ media queries contrains
   z-index: 1;
 }
 
-.wp-block-cover h2 {
-  width: 50%;
-}
-
-.wp-block-cover h2, .wp-block-cover h5 {
-  color: #087878 !important;
-}
-
 .wp-block-cover__inner-container {
   max-width: 1440px;
 }
@@ -1782,19 +1779,27 @@ media queries contrains
   max-width: 1440px;
 }
 
+.wp-block-column.hero-interior h2 {
+  width: 50%;
+}
+
+.wp-block-column.hero-interior h2, .wp-block-column.hero-interior h5 {
+  color: #087878;
+}
+
 .wp-block-column.sombra-top {
   margin-top: -2.5em;
+  padding-bottom: 5em;
   position: relative;
   z-index: 2;
 }
 
 .wp-block-column.sombra-top h2 {
   font-size: 4em;
-  margin: 3em 0 1em 0;
+  margin: 2.2em 0 1em 0;
 }
 
 .wp-block-column.sombra-top p {
-  font-size: 1.4em;
   font-weight: 400;
 }
 
@@ -1809,5 +1814,22 @@ media queries contrains
 .wp-block-column.sombra-top-derecha {
   padding-left: 2em;
   width: 50%;
+}
+
+.wp-block-column.fondo-flor .wp-block-cover__inner-container {
+  padding: 7em 0;
+}
+
+.wp-block-column.fondo-flor h2 {
+  color: #ffffff;
+  width: 100%;
+}
+
+.wp-block-column.fondo-flor h2 strong {
+  color: #a8c948;
+}
+
+.wp-block-column.fondo-flor p {
+  padding: 0 7em;
 }
 /*# sourceMappingURL=style.css.map */
