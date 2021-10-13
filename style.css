@@ -1030,6 +1030,10 @@ p {
   }
 }
 
+.site-main {
+  overflow-x: hidden;
+}
+
 .site-main.with-hero .entry-header {
   display: none;
 }
@@ -1942,5 +1946,20 @@ media queries contrains
 
 .wp-block-column.quiso-instituto-izquierda h2 {
   padding: 0;
+}
+
+.wp-block-column.quiso-historia h2 {
+  font-size: 4em;
+  padding: 0em;
+}
+
+.wp-block-column.quiso-estructura h2 {
+  font-size: 4em;
+  padding: 2em 0;
+}
+
+.wp-block-column.quiso-principios h2 {
+  font-size: 4em;
+  padding: 0em;
 }
 /*# sourceMappingURL=style.css.map */
