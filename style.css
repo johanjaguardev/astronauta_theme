@@ -1916,4 +1916,31 @@ media queries contrains
 .wp-block-column.segmentos-derecha h2 {
   padding: 0;
 }
+
+.wp-block-column.quiso-hero h2 {
+  padding-right: 8em;
+  text-align: left;
+}
+
+.wp-block-column.quiso-instituto h2 {
+  font-size: 4em;
+  padding: 0em;
+}
+
+.wp-block-column.quiso-instituto-derecha {
+  -webkit-transform: translateX(5em);
+          transform: translateX(5em);
+}
+
+.wp-block-column.quiso-instituto-izquierda {
+  margin-right: 1em;
+  max-width: 50%;
+  padding: 3em 12em 3em 1em;
+  -webkit-transform: translateX(10em);
+          transform: translateX(10em);
+}
+
+.wp-block-column.quiso-instituto-izquierda h2 {
+  padding: 0;
+}
 /*# sourceMappingURL=style.css.map */
