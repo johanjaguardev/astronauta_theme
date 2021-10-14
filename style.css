@@ -1928,7 +1928,7 @@ media queries contrains
 
 .wp-block-column.quiso-instituto h2 {
   font-size: 4em;
-  padding: 0em;
+  padding: 2em 0 1em 0;
 }
 
 .wp-block-column.quiso-instituto-derecha {
@@ -1961,5 +1961,30 @@ media queries contrains
 .wp-block-column.quiso-principios h2 {
   font-size: 4em;
   padding: 0em;
+}
+
+.wp-block-column.quiso-valores h2 {
+  font-size: 4em;
+  padding: 0em;
+}
+
+.wp-block-column.quiso-valores ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.wp-block-column.quiso-valores ul li {
+  color: #087878;
+  font-size: 1.6rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.wp-block-column.quiso-valores ul li::before {
+  content: '>';
+  color: #a8c948;
+  left: -1em;
+  position: absolute;
 }
 /*# sourceMappingURL=style.css.map */
