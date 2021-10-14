@@ -1987,4 +1987,29 @@ media queries contrains
   left: -1em;
   position: absolute;
 }
+
+.wp-block-column.quiso-valores-mano ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.wp-block-column.quiso-valores-mano ul li {
+  color: #087878;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 0.3em 0;
+  position: relative;
+}
+
+.wp-block-column.quiso-valores-mano ul li::before {
+  content: '>';
+  color: #a8c948;
+  left: -1em;
+  position: absolute;
+}
+
+.wp-block-column.quiso-valores-mano img {
+  margin-top: 0.1em;
+}
 /*# sourceMappingURL=style.css.map */
