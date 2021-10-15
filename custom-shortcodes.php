@@ -37,23 +37,30 @@ function dotibutton_function( $atts = array(), $content = null ) {
 }
 add_shortcode('dotibutton', 'dotibutton_function');
 
-function glideSlideFunction() {
-  return '
-  <div class="slide1" id="slide1">
-    <div class="glide" id="glide1" data-type="carousel" data-per_view="3" data-focus_at="center">
-      <div class="glide__track" data-glide-el="track">
-        <ul class="glide__slides">
-          <li class="glide__slide">0</li>
-          <li class="glide__slide">1</li>
-          <li class="glide__slide">2</li>
+function glideSlideFunction( $atts = array(), $content = null ) {
+  extract(shortcode_atts(array(
+    'id' => 'glide',
+    'per_view' => 3,
+    'focus_at' => 'center',
+    'type' => 'carousel',
+    'entry_category' => null,
+   ), $atts));
+  return "
+  <div class='${id}' id='${id}'>
+    <div class='glide' id='glide1' data-type='${type}' data-per_view=${per_view} data-focus_at=${focus_at}>
+      <div class='glide__track' data-glide-el='track'>
+        <ul class='glide__slides'>
+          <li class='glide__slide'>0</li>
+          <li class='glide__slide'>1</li>
+          <li class='glide__slide'>2</li>
         </ul>
       </div>
     </div>
-    <div class="glide__arrows" data-glide-el="controls">
-      <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
-      <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+    <div class='glide__arrows' data-glide-el='controls'>
+      <button class='glide__arrow glide__arrow--left' data-glide-dir='<'>prev</button>
+      <button class='glide__arrow glide__arrow--right' data-glide-dir='>'>next</button>
     </div>
-  </div>';
+  </div>";
 };
 add_shortcode('glideSlide', 'glideSlideFunction');
 ?>
