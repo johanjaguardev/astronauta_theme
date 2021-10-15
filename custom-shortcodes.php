@@ -36,7 +36,15 @@ function dotibutton_function( $atts = array(), $content = null ) {
   return '<a href="'. $link .'" target="blank" class="doti-button">' . $content . '</a>';
 }
 add_shortcode('dotibutton', 'dotibutton_function');
+function getList($category) {
+  $list = "";
+  query_posts("category_name=${category}&showposts=5");
+  while (have_posts()) : the_post();
+    $list = $list.get_the_content();
+  endwhile;
 
+  return $list;
+}
 function glideSlideFunction( $atts = array(), $content = null ) {
   extract(shortcode_atts(array(
     'id' => 'glide',
@@ -44,23 +52,20 @@ function glideSlideFunction( $atts = array(), $content = null ) {
     'focus_at' => 'center',
     'type' => 'carousel',
     'entry_category' => null,
-   ), $atts));
-  return "
-  <div class='${id}_container' id='${id}_container'>
+    ), $atts));
+  $headerGlideHTML = "
+   <div class='${id}_container' id='${id}_container'>
     <div class='glide glide__${id}' id='${id}' data-type='${type}' data-per_view=${per_view} data-focus_at=${focus_at}>
       <div class='glide__track' data-glide-el='track'>
-        <ul class='glide__slides'>
-          <li class='glide__slide'>0</li>
-          <li class='glide__slide'>1</li>
-          <li class='glide__slide'>2</li>
-        </ul>
-      </div>
-    </div>
+        <ul class='glide__slides'>";
+  $footerGlideHTML = "</ul></div></div>
     <div class='glide__arrows' data-glide-el='controls'>
       <button class='glide__arrow glide__arrow--left' data-glide-dir='<'>prev</button>
       <button class='glide__arrow glide__arrow--right' data-glide-dir='>'>next</button>
     </div>
   </div>";
+  $ulHTML = getList($entry_category);
+  return $headerGlideHTML.$ulHTML.$footerGlideHTML;
 };
 add_shortcode('glideSlide', 'glideSlideFunction');
 ?>
