@@ -134,6 +134,7 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
+<script src="<?php bloginfo('template_directory'); ?>/js/glide.min.js"></script>
+<script src="<?php bloginfo('template_directory'); ?>/js/slideshows.js"></script>
 </body>
 </html>
