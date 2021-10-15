@@ -1,10 +1,14 @@
 var slides = document.querySelectorAll('.glide')
 for (let slide of slides) {
-  console.log(slide, slide.id)
-  const glide = new Glide(`#${slide.id}`, {
-    type: 'carousel',
-    focusAt: 'center',
-    perView: 3
+  const glideID = slide.id
+  const glideType = slide.getAttribute('data-type')
+  const glideFocusAt = slide.getAttribute('data-focus_at')
+  const glidePerView = slide.getAttribute('data-per_view')
+  console.log(glideID, glideType, glideFocusAt, glidePerView)
+  const glide = new Glide(`#${glideID}`, {
+    type: glideType,
+    focusAt: glideFocusAt,
+    perView: glidePerView
   })
   glide.mount()
 }
