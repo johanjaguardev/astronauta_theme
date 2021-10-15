@@ -46,8 +46,8 @@ function glideSlideFunction( $atts = array(), $content = null ) {
     'entry_category' => null,
    ), $atts));
   return "
-  <div class='${id}' id='${id}'>
-    <div class='glide' id='glide1' data-type='${type}' data-per_view=${per_view} data-focus_at=${focus_at}>
+  <div class='${id}_container' id='${id}_container'>
+    <div class='glide glide__${id}' id='${id}' data-type='${type}' data-per_view=${per_view} data-focus_at=${focus_at}>
       <div class='glide__track' data-glide-el='track'>
         <ul class='glide__slides'>
           <li class='glide__slide'>0</li>
