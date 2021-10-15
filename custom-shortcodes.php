@@ -39,7 +39,8 @@ add_shortcode('dotibutton', 'dotibutton_function');
 
 function glideSlideFunction() {
   return '
-    <div class="glide">
+  <div class="slide1" id="slide1">
+    <div class="glide" id="glide1">
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides">
           <li class="glide__slide">0</li>
@@ -47,7 +48,28 @@ function glideSlideFunction() {
           <li class="glide__slide">2</li>
         </ul>
       </div>
-    </div>';
+    </div>
+    <div class="glide__arrows" data-glide-el="controls">
+      <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+      <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+    </div>
+  </div>
+  <div class="slide2" id="slide2">
+    <div class="glide" id="glide2">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <li class="glide__slide">0</li>
+          <li class="glide__slide">1</li>
+          <li class="glide__slide">2</li>
+        </ul>
+      </div>
+    </div>
+    <div class="glide__arrows" data-glide-el="controls">
+      <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+      <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+    </div>
+  </div>
+  ';
 };
 add_shortcode('glideSlide', 'glideSlideFunction');
 ?>
