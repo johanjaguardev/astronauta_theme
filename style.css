@@ -1712,9 +1712,14 @@ media queries contrains
   display: flex;
 }
 
-.faqs-tabs__content p {
+.faqs-tabs__content p, .faqs-tabs__content li {
   font-size: 1.5em;
   margin: 0;
+}
+
+.faqs-tabs__content ul {
+  margin: 1em 0 0 0;
+  padding: 0;
 }
 
 .faqs-tabs_ul-content {
@@ -1733,12 +1738,11 @@ media queries contrains
 .faqs-tabs__li {
   border-bottom: 1px solid #595959;
   color: #087878;
+  cursor: pointer;
   font-size: 2em;
   font-weight: 500;
-  padding: 1.5em 1em 1.5em 0;
+  padding: 1.8em 1em 1.8em 0;
   position: relative;
-  -webkit-transition: .3s all ease-out;
-  transition: .3s all ease-out;
   z-index: 1;
 }
 

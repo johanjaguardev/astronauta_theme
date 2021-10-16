@@ -96,9 +96,9 @@ function getListFAQSTitles($category) {
   $conteo = 0;
   foreach ($posts as $post) {
     if($conteo == 0) {
-      $list.= "<li class='faqs-tabs__li faqs-tabs__li-active' data-tab=".$conteo.">";
+      $list.= "<li class='faqs-tabs__li faqs-tabs__li-active faqs-tabs__li-".$conteo."' data-tab=".$conteo.">";
     } else {
-      $list.= "<li class='faqs-tabs__li' data-tab=".$conteo.">";
+      $list.= "<li class='faqs-tabs__li faqs-tabs__li-".$conteo."' data-tab=".$conteo.">";
     }
     $list.= get_the_title($post['ID']);
     $list.= "</li>";
@@ -114,9 +114,9 @@ function getListFAQSContent($category) {
   $conteo = 0;
   foreach ($posts as $post) {
     if($conteo == 0) {
-      $list.= "<li class='faqs-tabs__content faqs-tabs__content-".$conteo." faqs-tabs__content-active' data-tab=".$conteo.">";
+      $list.= "<li class='faqs-tabs__content faqs-tabs__content-".$conteo." faqs-tabs__content-active'  data-tab=".$conteo.">";
     } else {
-      $list.= "<li class='faqs-tabs__content' data-tab=".$conteo.">";
+      $list.= "<li class='faqs-tabs__content faqs-tabs__content-".$conteo."' data-tab=".$conteo.">";
     }
     $list.= get_post_field('post_content', $post['ID']);
     $list.= "</li>";
