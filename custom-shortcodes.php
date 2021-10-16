@@ -131,7 +131,7 @@ function faqsTabsFunction( $atts = array(), $content = null ) {
   ), $atts));
   $headerHTML = '<div class="faqs-tabs">';
   $contentHTML = '  <div class="faqs-tabs__izquierda">';
-  $contentHTML .= '   <ul class="faqs-tabs_ul">';
+  $contentHTML .= '   <ul class="faqs-tabs__ul">';
   $contentHTML .= getListFAQSTitles($entry_category);
   $contentHTML .= '   </ul>';
   $contentHTML .= ' </div>';
