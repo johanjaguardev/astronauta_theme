@@ -1229,6 +1229,7 @@ media queries contrains
 }
 
 .header__phone {
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1272,9 +1273,13 @@ media queries contrains
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.header__nav {
+  margin-left: 3em;
 }
 
 .header__nav ul li a {
@@ -1330,7 +1335,7 @@ media queries contrains
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  gap: 30px;
+  gap: 5em;
 }
 
 .header__search {
@@ -1919,7 +1924,7 @@ media queries contrains
 
 .footer__menu a {
   color: #ffffff;
-  font-size: 1.3em;
+  font-size: 0.9em;
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
@@ -1938,7 +1943,7 @@ media queries contrains
 }
 
 .footer__menu ul .sub-menu a {
-  font-size: 1.1em;
+  font-size: 0.9em;
   font-weight: normal;
   text-transform: capitalize;
 }
@@ -2111,6 +2116,10 @@ media queries contrains
 
 .wp-block-column.proceso {
   padding: 6em 0 8em 0;
+}
+
+.wp-block-column.proceso h2 {
+  font-size: 4em;
 }
 
 .wp-block-column.esquemas h4 {
@@ -2433,7 +2442,109 @@ media queries contrains
   padding: 1.3em 2em;
 }
 
-.wp-block-column.medios .glide__excerpt {
+.wp-block-column.medios-blog h2, .wp-block-column.medios-noticias h2 {
+  font-size: 4em;
+}
+
+.wp-block-column.medios-blog .glide__excerpt, .wp-block-column.medios-noticias .glide__excerpt {
   display: none;
+}
+
+.wp-block-column.medios-blog {
+  padding-top: 8em;
+}
+
+.wp-block-column.medios-blog > h2 {
+  margin-bottom: 2em;
+}
+
+.wp-block-column.medios-noticias .glide__arrow {
+  background-color: #F08437;
+}
+
+.wp-block-column.medios-noticias .glide__readmore {
+  border-color: #F08437;
+  color: #F08437;
+}
+
+.wp-block-column.faq-hero h2 {
+  width: 50%;
+}
+
+.wp-block-column.faq-tabs {
+  padding: 7em 0;
+}
+
+.wp-block-column.faq-tabs h2 {
+  font-size: 4em;
+  padding: 2em 0;
+}
+
+.wp-block-column.contacto-form {
+  background-color: #EDEDED;
+  border-radius: 3em;
+  color: #087878;
+  margin: 4em 2em 0 0;
+  padding: 1.3em 3em 4em 3em;
+}
+
+.wp-block-column.contacto-form h2 {
+  font-size: 4em;
+  padding: 0;
+}
+
+.wp-block-column.contacto-form input, .wp-block-column.contacto-form textarea {
+  border-radius: 2em !important;
+  max-width: initial !important;
+  width: 100% !important;
+}
+
+.wp-block-column.contacto-form input::-webkit-input-placeholder, .wp-block-column.contacto-form textarea::-webkit-input-placeholder {
+  color: #087878;
+  font-weight: 500;
+}
+
+.wp-block-column.contacto-form input:-ms-input-placeholder, .wp-block-column.contacto-form textarea:-ms-input-placeholder {
+  color: #087878;
+  font-weight: 500;
+}
+
+.wp-block-column.contacto-form input::-ms-input-placeholder, .wp-block-column.contacto-form textarea::-ms-input-placeholder {
+  color: #087878;
+  font-weight: 500;
+}
+
+.wp-block-column.contacto-form input::placeholder, .wp-block-column.contacto-form textarea::placeholder {
+  color: #087878;
+  font-weight: 500;
+}
+
+.wp-block-column.contacto-form textarea {
+  padding-top: 0.5em;
+}
+
+.wp-block-column.contacto-form button {
+  background-color: #F08437 !important;
+  border-radius: 20px;
+  color: #ffffff !important;
+  font-size: 2.5em !important;
+  font-weight: 700;
+  left: 50%;
+  margin: 10px 0 !important;
+  position: absolute;
+  padding: 5px 40px !important;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.wp-block-column.contacto-redes {
+  margin-top: 4em;
+}
+
+.wp-block-column.contacto-redes h2 {
+  font-size: 4em;
+  padding: 0;
 }
 /*# sourceMappingURL=style.css.map */

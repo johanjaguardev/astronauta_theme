@@ -1,43 +1,4 @@
-<?php function dotiavatar_function( $atts = array() ) {
-  // set up default parameters
-  extract(shortcode_atts(array(
-  'rating' => '5'
-  ), $atts));
-  return "<img src=\"http://dayoftheindie.com/wp-content/uploads/$rating-star.png\" 
-  alt=\"doti-rating\" width=\"130\" height=\"188\" class=\"left-align\" />";
-}
-add_shortcode('dotiavatar', 'dotiavatar_function');
-
-function dotirating_function( $atts = array() ) {
-  
-  // set up default parameters
-  extract(shortcode_atts(array(
-   'rating' => '5'
-  ), $atts));
-  
-  return "<img src=\"http://dayoftheindie.com/wp-content/uploads/$rating-star.png\" 
-  alt=\"doti-rating\" width=\"130\" height=\"188\" class=\"left-align\" />";
-}
-
-add_shortcode('dotirating', 'dotirating_function');
-
-function dotifollow_function( $atts, $content = null ) {
-  return '<a href="https://twitter.com/DayOfTheIndie" target="blank" class="doti-follow">' . $content . '</a>';
-}
-add_shortcode('dotifollow', 'dotifollow_function');
-
-function dotibutton_function( $atts = array(), $content = null ) {
-  
-  // set up default parameters
-  extract(shortcode_atts(array(
-   'link' => '#'
-  ), $atts));
-  
-  return '<a href="'. $link .'" target="blank" class="doti-button">' . $content . '</a>';
-}
-add_shortcode('dotibutton', 'dotibutton_function');
-
-function getList($category, $nolink) {
+<?php function getList($category, $nolink) {
   $list = "";
   $args = array( 'category_name' => $category );
   $posts = wp_get_recent_posts( $args );
@@ -55,7 +16,7 @@ function getList($category, $nolink) {
     if( get_the_excerpt($post['ID']) != null ) {
       $list.= "<p class='glide__excerpt'>".get_the_excerpt($post['ID'])."</p>";
     }
-    if( $post['guid'] != null && $nolink == false) {
+    if( $post['guid'] != null && $nolink == 'false') {
       $list.= "<a class='glide__readmore' href='".$post['guid']."'>Leer más</a>";
     }
     $list.= "</div></li>";
@@ -71,8 +32,9 @@ function glideSlideFunction( $atts = array(), $content = null ) {
     'type' => 'carousel',
     'entry_category' => null,
     'classes' => 'default',
-    'nolink' => false,
+    'nolink' => 'false',
   ), $atts));
+
   $headerGlideHTML = "
    <div class='${id}_container glide__container glide__${classes}' id='${id}_container'>
     <div class='glide glide__${id}' id='${id}' data-type='${type}' data-per_view=${per_view} data-focus_at='${focus_at}'>
