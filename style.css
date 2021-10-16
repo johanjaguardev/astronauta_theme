@@ -2392,6 +2392,26 @@ media queries contrains
   position: absolute;
 }
 
+.wp-block-column.quiso-h2 {
+  font-size: 4em;
+}
+
+.wp-block-column.quiso-donde-estamos .wp-block-group__inner-container {
+  background-color: #EDEDED;
+  border-radius: 2em;
+  color: #087878;
+  padding: 2em;
+}
+
+.wp-block-column.quiso-donde-estamos h2 {
+  font-size: 4em;
+  padding: 2em 0;
+}
+
+.wp-block-column.quiso-etica {
+  margin-bottom: 5em;
+}
+
 .wp-block-column.formacion-capacitacion-izquierda {
   margin-left: -12em;
 }
@@ -2484,12 +2504,13 @@ media queries contrains
   background-color: #EDEDED;
   border-radius: 3em;
   color: #087878;
-  margin: 4em 2em 0 0;
+  margin: 5em 2em 0 0;
   padding: 1.3em 3em 4em 3em;
 }
 
 .wp-block-column.contacto-form h2 {
-  font-size: 4em;
+  font-size: 3.5em;
+  font-weight: 600;
   padding: 0;
 }
 
@@ -2540,11 +2561,22 @@ media queries contrains
 }
 
 .wp-block-column.contacto-redes {
-  margin-top: 4em;
+  margin-top: 5em;
 }
 
 .wp-block-column.contacto-redes h2 {
-  font-size: 4em;
+  font-size: 3.8em;
   padding: 0;
+}
+
+.wp-block-column.contacto-redes a {
+  text-decoration: none;
+}
+
+.wp-block-column.contacto-redes .wp-social-link-instagram,
+.wp-block-column.contacto-redes .wp-social-link-linkedin,
+.wp-block-column.contacto-redes .wp-social-link-facebook,
+.wp-block-column.contacto-redes .wp-social-link-twitter {
+  background-color: #087878;
 }
 /*# sourceMappingURL=style.css.map */
