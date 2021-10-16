@@ -37,7 +37,7 @@ function dotibutton_function( $atts = array(), $content = null ) {
 }
 add_shortcode('dotibutton', 'dotibutton_function');
 
-function getList($category) {
+function getList($category, $nolink) {
   $list = "";
   $args = array( 'category_name' => $category );
   $posts = wp_get_recent_posts( $args );
@@ -55,10 +55,10 @@ function getList($category) {
     if( get_the_excerpt($post['ID']) != null ) {
       $list.= "<p class='glide__excerpt'>".get_the_excerpt($post['ID'])."</p>";
     }
-    if( $post['guid'] != null ) {
+    if( $post['guid'] != null && $nolink == false) {
       $list.= "<a class='glide__readmore' href='".$post['guid']."'>Leer más</a>";
     }
-
+    $list.= "</div></li>";
   }
   wp_reset_postdata();
   return $list;
@@ -70,11 +70,12 @@ function glideSlideFunction( $atts = array(), $content = null ) {
     'focus_at' => 'center',
     'type' => 'carousel',
     'entry_category' => null,
-    'classes' => 'default'
-    ), $atts));
+    'classes' => 'default',
+    'nolink' => false,
+  ), $atts));
   $headerGlideHTML = "
    <div class='${id}_container glide__container glide__${classes}' id='${id}_container'>
-    <div class='glide glide__${id}' id='${id}' data-type='${type}' data-per_view=${per_view} data-focus_at=${focus_at}>
+    <div class='glide glide__${id}' id='${id}' data-type='${type}' data-per_view=${per_view} data-focus_at='${focus_at}'>
       <div class='glide__track' data-glide-el='track'>
         <ul class='glide__slides'>";
   $footerGlideHTML = "</ul></div></div>
@@ -83,7 +84,7 @@ function glideSlideFunction( $atts = array(), $content = null ) {
       <a class='glide__arrow glide__arrow--right' data-glide-dir='>'>></a>
     </div>
   </div>";
-  $ulHTML = getList($entry_category);
+  $ulHTML = getList($entry_category, $nolink);
   return $headerGlideHTML.$ulHTML.$footerGlideHTML;
 };
 add_shortcode('glideSlide', 'glideSlideFunction');
