@@ -88,4 +88,61 @@ function glideSlideFunction( $atts = array(), $content = null ) {
   return $headerGlideHTML.$ulHTML.$footerGlideHTML;
 };
 add_shortcode('glideSlide', 'glideSlideFunction');
+
+function getListFAQSTitles($category) {
+  $list = "";
+  $args = array( 'category_name' => $category );
+  $posts = wp_get_recent_posts( $args );
+  $conteo = 0;
+  foreach ($posts as $post) {
+    if($conteo == 0) {
+      $list.= "<li class='faqs-tabs__li faqs-tabs__li-active' data-tab=".$conteo.">";
+    } else {
+      $list.= "<li class='faqs-tabs__li' data-tab=".$conteo.">";
+    }
+    $list.= get_the_title($post['ID']);
+    $list.= "</li>";
+    $conteo++;
+  }
+  wp_reset_postdata();
+  return $list;
+}
+function getListFAQSContent($category) {
+  $list = "";
+  $args = array( 'category_name' => $category );
+  $posts = wp_get_recent_posts( $args );
+  $conteo = 0;
+  foreach ($posts as $post) {
+    if($conteo == 0) {
+      $list.= "<li class='faqs-tabs__content faqs-tabs__content-".$conteo." faqs-tabs__content-active' data-tab=".$conteo.">";
+    } else {
+      $list.= "<li class='faqs-tabs__content' data-tab=".$conteo.">";
+    }
+    $list.= get_post_field('post_content', $post['ID']);
+    $list.= "</li>";
+    $conteo++;
+  }
+  wp_reset_postdata();
+  return $list;
+}
+function faqsTabsFunction( $atts = array(), $content = null ) {
+  extract(shortcode_atts(array(
+    'entry_category' => null,
+  ), $atts));
+  $headerHTML = '<div class="faqs-tabs">';
+  $contentHTML = '  <div class="faqs-tabs__izquierda">';
+  $contentHTML .= '   <ul class="faqs-tabs_ul">';
+  $contentHTML .= getListFAQSTitles($entry_category);
+  $contentHTML .= '   </ul>';
+  $contentHTML .= ' </div>';
+  $contentHTML .= ' <div class="faqs-tabs__derecha">';
+  $contentHTML .= '   <ul class="faqs-tabs_ul-content">';
+  $contentHTML .= getListFAQSContent($entry_category);
+  $contentHTML .= '   </ul>';
+  $contentHTML .= ' </div>';
+  $footerHTML = '</div>';
+  $entireHTML = $headerHTML.$contentHTML.$footerHTML;
+  return $entireHTML;
+};
+add_shortcode('faqsTabs', 'faqsTabsFunction');
 ?>

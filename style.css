@@ -1685,6 +1685,44 @@ media queries contrains
   padding-bottom: 5em;
 }
 
+.faqs-tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.faqs-tabs__content {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0;
+  padding: 0 2em;
+}
+
+.faqs-tabs__content-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.faqs-tabs__content p {
+  margin: 0;
+}
+
+.faqs-tabs__izquierda {
+  width: 33%;
+}
+
+.faqs-tabs__derecha {
+  width: 66%;
+}
+
 /*
 Color Palette
 */
