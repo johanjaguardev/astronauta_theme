@@ -1038,6 +1038,110 @@ p {
   display: none;
 }
 
+.glide__container {
+  position: relative;
+}
+
+.glide__arrows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  left: -3%;
+  position: absolute;
+  top: 50%;
+  width: 106%;
+}
+
+.glide__arrow {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #a8c948;
+  border-radius: 50%;
+  color: #ffffff;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2em;
+  font-weight: 800;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 50px;
+  -webkit-transition: .3s all ease-out;
+  transition: .3s all ease-out;
+  width: 50px;
+}
+
+.glide__arrow:hover, .glide__arrow:focus {
+  background-color: #087878;
+  color: #ffffff;
+}
+
+.glide__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.glide__li {
+  padding: 2em;
+}
+
+.glide__title {
+  color: #087878;
+  font-size: 1.3em;
+  font-weight: 500;
+  margin-bottom: 3em;
+  text-transform: uppercase;
+}
+
+.glide__img {
+  border-radius: 1.5em;
+  margin: 0.3em;
+  max-width: 100%;
+}
+
+.glide__excerpt {
+  clear: both;
+  display: block;
+  font-size: 1em;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: normal;
+}
+
+.glide__readmore {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border: 2px solid #a8c948;
+  border-radius: 1em;
+  color: #a8c948;
+  font-size: 1.8em;
+  font-weight: 800;
+  padding: 0.5em 1em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: .3s all ease-out;
+  transition: .3s all ease-out;
+  width: 10em;
+}
+
+.glide__readmore:hover, .glide__readmore:visited, .glide__readmore:active {
+  border-color: #087878;
+  color: #087878;
+}
+
 /*
 Color Palette
 */
@@ -2101,5 +2205,9 @@ media queries contrains
   list-style: none;
   margin: 1em;
   padding: 1.3em 2em;
+}
+
+.wp-block-column.medios .glide__excerpt {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

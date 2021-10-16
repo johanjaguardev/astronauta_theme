@@ -36,23 +36,27 @@ function dotibutton_function( $atts = array(), $content = null ) {
   return '<a href="'. $link .'" target="blank" class="doti-button">' . $content . '</a>';
 }
 add_shortcode('dotibutton', 'dotibutton_function');
+
 function getList($category) {
   $list = "";
   $args = array( 'category_name' => $category );
   $posts = wp_get_recent_posts( $args );
+
   foreach ($posts as $post) {
-    $list.= "<li><div class='glide__box'>";
+    $list.= "<li class='glide__li'><div class='glide__box'>";
     if( get_the_post_thumbnail_url($post['ID']) != null ) {
       $list.= "<img src='".get_the_post_thumbnail_url($post['ID'])."' class='glide__img' />";
+    } else {
+      $list.= "<img src='https://martialartsplusinc.com/wp-content/uploads/2017/04/default-image.jpg' class='glide__img' />";
     }
     if( get_the_title($post['ID']) != null ) {
-      $list.= "<h4>".get_the_title($post['ID'])."</h4>";
+      $list.= "<h4 class='glide__title'>".get_the_title($post['ID'])."</h4>";
     }
     if( get_the_excerpt($post['ID']) != null ) {
-      $list.= "<p>".get_the_excerpt($post['ID'])."</p>";
+      $list.= "<p class='glide__excerpt'>".get_the_excerpt($post['ID'])."</p>";
     }
     if( $post['guid'] != null ) {
-      $list.= "<a href='".$post['guid']."'>Ver mas</a>";
+      $list.= "<a class='glide__readmore' href='".$post['guid']."'>Leer más</a>";
     }
 
   }
@@ -66,16 +70,17 @@ function glideSlideFunction( $atts = array(), $content = null ) {
     'focus_at' => 'center',
     'type' => 'carousel',
     'entry_category' => null,
+    'classes' => 'default'
     ), $atts));
   $headerGlideHTML = "
-   <div class='${id}_container' id='${id}_container'>
+   <div class='${id}_container glide__container glide__${classes}' id='${id}_container'>
     <div class='glide glide__${id}' id='${id}' data-type='${type}' data-per_view=${per_view} data-focus_at=${focus_at}>
       <div class='glide__track' data-glide-el='track'>
         <ul class='glide__slides'>";
   $footerGlideHTML = "</ul></div></div>
     <div class='glide__arrows' data-glide-el='controls'>
-      <button class='glide__arrow glide__arrow--left' data-glide-dir='<'>prev</button>
-      <button class='glide__arrow glide__arrow--right' data-glide-dir='>'>next</button>
+      <a class='glide__arrow glide__arrow--left' data-glide-dir='<'><</a>
+      <a class='glide__arrow glide__arrow--right' data-glide-dir='>'>></a>
     </div>
   </div>";
   $ulHTML = getList($entry_category);
