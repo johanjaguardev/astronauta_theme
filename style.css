@@ -989,6 +989,10 @@ body {
   font-size: 16px;
 }
 
+body.post, body.page {
+  margin: 0;
+}
+
 h1, h2, h3, h4, h5 {
   color: #087878;
   font-family: "Montserrat", sans-serif;
@@ -1276,6 +1280,7 @@ media queries contrains
 .header__nav ul li a {
   color: #ffffff;
   font-family: "Montserrat", sans-serif;
+  position: relative;
   text-decoration: none;
   -webkit-transition: opacity ease-in .3s;
   transition: opacity ease-in .3s;
@@ -1283,6 +1288,36 @@ media queries contrains
 
 .header__nav ul li a:hover, .header__nav ul li a:focus {
   opacity: 0.7;
+}
+
+.header__nav ul li a::after {
+  content: '\\/';
+  font-size: 0.6em;
+  right: -15px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  top: 50%;
+  position: absolute;
+}
+
+.header__nav ul li ul.sub-menu {
+  background-color: white;
+  border-radius: 0.3em;
+  display: block;
+}
+
+.header__nav ul li ul.sub-menu li {
+  padding: 0.4em;
+}
+
+.header__nav ul li ul.sub-menu li a {
+  color: #087878;
+  font-size: 0.8em;
+  font-weight: 500;
+}
+
+.header__nav ul li ul.sub-menu li a::after {
+  display: none;
 }
 
 .header__nav ul {
@@ -1396,8 +1431,10 @@ media queries contrains
   font-size: 2.5em;
   font-weight: 700;
   margin: 10px 0;
+  position: relative;
   padding: 5px 40px;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .hero__coin {
