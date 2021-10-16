@@ -2091,7 +2091,42 @@ media queries contrains
 
 .wp-block-column.quiso-historia h2 {
   font-size: 4em;
+  margin: -5.5em auto 3.7em auto;
   padding: 0em;
+}
+
+.wp-block-column.quiso-historia .glide__historia {
+  margin-top: -8.2em;
+}
+
+.wp-block-column.quiso-historia .glide__historia img.glide__img {
+  display: none;
+}
+
+.wp-block-column.quiso-historia .glide__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0 0 0 8%;
+}
+
+.wp-block-column.quiso-historia .glide__title {
+  color: #a8c948;
+  font-size: 6em;
+  font-weight: 300;
+  margin: 1.5em 0 0 0;
+}
+
+.wp-block-column.quiso-historia .glide__excerpt {
+  color: #ffffff;
+  font-size: 2.2em;
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0 10%;
 }
 
 .wp-block-column.quiso-estructura h2 {
