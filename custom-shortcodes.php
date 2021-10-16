@@ -38,11 +38,25 @@ function dotibutton_function( $atts = array(), $content = null ) {
 add_shortcode('dotibutton', 'dotibutton_function');
 function getList($category) {
   $list = "";
-  query_posts("category_name=${category}&showposts=5");
-  while (have_posts()) : the_post();
-    $list = $list.get_the_content();
-  endwhile;
+  $args = array( 'category_name' => $category );
+  $posts = wp_get_recent_posts( $args );
+  foreach ($posts as $post) {
+    $list.= "<li><div class='glide__box'>";
+    if( get_the_post_thumbnail_url($post['ID']) != null ) {
+      $list.= "<img src='".get_the_post_thumbnail_url($post['ID'])."' class='glide__img' />";
+    }
+    if( get_the_title($post['ID']) != null ) {
+      $list.= "<h4>".get_the_title($post['ID'])."</h4>";
+    }
+    if( get_the_excerpt($post['ID']) != null ) {
+      $list.= "<p>".get_the_excerpt($post['ID'])."</p>";
+    }
+    if( $post['guid'] != null ) {
+      $list.= "<a href='".$post['guid']."'>Ver mas</a>";
+    }
 
+  }
+  wp_reset_postdata();
   return $list;
 }
 function glideSlideFunction( $atts = array(), $content = null ) {
