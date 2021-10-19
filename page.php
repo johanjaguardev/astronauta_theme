@@ -16,7 +16,7 @@ get_header();
 ?>
 
 
-<main id="primary" class="site-main <?php echo get_post_meta(get_the_ID(), 'class', TRUE); ?>">
+<main id="primary" class="site-main column <?php echo get_post_meta(get_the_ID(), 'class', TRUE); ?>">
 
 <?php
 while ( have_posts() ) :
