@@ -100,7 +100,7 @@
 		<div class="header__body">
       <div class="container">
         <div class="header__logo">
-          <img src="<?php bloginfo('template_directory'); ?>/assets/logo.svg"/>          
+          <?php the_custom_logo();?> 
         </div>
         <div class="header__nav">
           <nav id="site-navigation" class="main-navigation">
