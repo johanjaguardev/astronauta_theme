@@ -1243,7 +1243,6 @@ media queries contrains
 }
 
 .header__phone {
-  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1251,13 +1250,18 @@ media queries contrains
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  font-size: 15px;
-  font-weight: bold;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  letter-spacing: 1px;
   width: 120px;
+}
+
+.header__phone a {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-decoration: none;
 }
 
 .header__icon {
