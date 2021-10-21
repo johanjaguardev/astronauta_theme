@@ -2035,10 +2035,12 @@ media queries contrains
           flex-direction: row;
   font-weight: normal;
   font-style: normal;
+  gap: 25px;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  width: 400px;
+  padding: 0em 0;
+  width: 320px;
 }
 
 .footer__icon {
@@ -2070,16 +2072,51 @@ media queries contrains
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  padding-left: 30px;
+  position: relative;
 }
 
 .footer__email a, .footer__phone a {
   color: #ffffff;
-  margin: 0.5em 0;
+  font-weight: 500;
+  margin: 0.5em 0 0 0;
   text-decoration: none;
 }
 
 .footer__email-ico, .footer__phone-ico {
   padding-right: 10px;
+}
+
+.footer__email {
+  margin-top: 6px;
+}
+
+.footer__email::before {
+  background-image: url(assets/mail-ico.png);
+  background-repeat: no-repeat;
+  bottom: 4px;
+  content: '';
+  font-size: 0.6em;
+  height: 20px;
+  position: absolute;
+  left: -7px;
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+  width: 26px;
+}
+
+.footer__phone::before {
+  background-image: url(assets/phone-ico.png);
+  background-repeat: no-repeat;
+  bottom: 0px;
+  content: '';
+  font-size: 0.6em;
+  height: 32px;
+  position: absolute;
+  left: -4px;
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+  width: 18px;
 }
 
 .wp-block {

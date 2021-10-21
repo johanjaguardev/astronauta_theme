@@ -58,7 +58,7 @@
             </svg>
           </div>
         </div>
-        <?php echo do_shortcode ("[socialNetworks]");?>
+        <?php echo do_shortcode ("[socialNetworks direction='row']");?>
       </div>
 		</div>
 		<div class="header__body">
