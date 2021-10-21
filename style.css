@@ -2684,10 +2684,21 @@ media queries contrains
   text-decoration: none;
 }
 
-.wp-block-column.contacto-redes .wp-social-link-instagram,
-.wp-block-column.contacto-redes .wp-social-link-linkedin,
-.wp-block-column.contacto-redes .wp-social-link-facebook,
-.wp-block-column.contacto-redes .wp-social-link-twitter {
-  background-color: #087878;
+.wp-block-column.contacto-redes .header__social {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 4em;
+  padding: 2em 3em 4em 1em;
+}
+
+.wp-block-column.contacto-redes svg {
+  fill: #087878;
+  -webkit-transform: scale(3.5);
+          transform: scale(3.5);
+}
+
+.wp-block-column.contacto-redes .header__phone {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
