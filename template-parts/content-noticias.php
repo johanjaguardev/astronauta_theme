@@ -10,7 +10,7 @@
 			</div>
 			<div class="noticias__derecha">
 				<h2>SÍGANOS EN REDES</h2>
-				<img src="<?php bloginfo('template_directory'); ?>/assets/twitter-preview.png" alt="Twitter Widget Preview">
+				<?php echo do_shortcode ("[twitterWidget]");?>
 			</div>
 		</div>
 	</div>

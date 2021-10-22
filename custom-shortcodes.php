@@ -238,3 +238,13 @@ function preguntasFrecuentesHome( $atts = array(), $content = null ) {
   return $faqsHTML;
 };
 add_shortcode('preguntasFrecuentesHome', 'preguntasFrecuentesHome');
+
+
+function twitterWidget( $atts = array(), $content = null ) {
+  extract(shortcode_atts(array(
+    'entry_category' => null,
+  ), $atts));
+  $twitterWidget = '<div class="twitterWidget"><a class="twitter-timeline" href="https://twitter.com/HalalColombia?ref_src=twsrc%5Etfw">Tweets by HalalColombia</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>'; 
+  return $twitterWidget;
+};
+add_shortcode('twitterWidget', 'twitterWidget');

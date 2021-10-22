@@ -1571,6 +1571,14 @@ media queries contrains
   width: 45%;
 }
 
+.twitterWidget {
+  border: 1px solid #EDEDED;
+  border-radius: 20px;
+  height: 650px;
+  overflow-y: auto;
+  padding: 5px 5px 0 5px;
+}
+
 .descripcion {
   background-image: url(assets/desc.png);
   background-position-y: center;
