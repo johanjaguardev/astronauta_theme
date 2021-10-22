@@ -1664,6 +1664,17 @@ media queries contrains
   padding: 10em 0 5em 0;
 }
 
+.servicios a {
+  color: #087878;
+  text-decoration: none;
+  -webkit-transition: 0,5s ease-in-out color;
+  transition: 0,5s ease-in-out color;
+}
+
+.servicios a::visited, .servicios a::hover, .servicios a::focus {
+  color: #a8c948;
+}
+
 .servicios h2 {
   color: #F08437;
   font-size: 4.5em;

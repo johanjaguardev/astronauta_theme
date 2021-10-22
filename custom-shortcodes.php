@@ -131,8 +131,6 @@ function faqsTabsFunction( $atts = array(), $content = null ) {
 };
 add_shortcode('faqsTabs', 'faqsTabsFunction');
 
-
-
 function socialNetworks( $atts = array(), $content = null ) {
   $direction = $atts['direction'];
   $page = getDataFromPage(array(
@@ -214,10 +212,29 @@ function socialNetworks( $atts = array(), $content = null ) {
   </div>
   ';
     }
-
   return $socialHTML;
 }
 add_shortcode('socialNetworks', 'socialNetworks');
 
-// <?php if( get_post_meta($page->ID, 'twitter', TRUE)):
-//   $twitter = get_post_meta($page->ID, 'twitter', TRUE);?>
+function preguntasFrecuentesHome( $atts = array(), $content = null ) {
+  extract(shortcode_atts(array(
+    'entry_category' => null,
+  ), $atts));
+  $faqsHTML = '
+  <div class="faq">
+    <div class="container">
+      <div class="faq__content">
+        <div class="faq__image">
+        </div>
+        <div class="faq__info">
+          <h3>PREGUNTAS FRECUENTES</h3>
+          <p>Resuelva sus dudas relacionadas con nuestros servicios</p>
+          <a href="'.get_bloginfo("url").'/preguntas-frecuentes/" target="_blank">CONOCER MÁS</a>
+        </div>
+      </div>
+      <div class="faq__bg"></div>
+    </div>
+  </div>';
+  return $faqsHTML;
+};
+add_shortcode('preguntasFrecuentesHome', 'preguntasFrecuentesHome');

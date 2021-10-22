@@ -6,6 +6,7 @@
     </div>
     <div class="servicios__content">
       <div class="servicios__content-icon1">
+        <a href="<?php echo get_bloginfo('url') ?>/certificado" target="_blank">
         <svg width="242px" height="242px" viewBox="0 0 242 242" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                 <g id="1-Home" transform="translate(-207.000000, -4165.000000)">
@@ -17,9 +18,11 @@
                 </g>
             </g>
         </svg>
+        </a>
       </div>
-      <h3>CERTIFICACIÓN HALAL</h3>
+      <h3><a href="<?php echo get_bloginfo('url') ?>/certificado" target="_blank">CERTIFICACIÓN HALAL</a></h3>
       <div class="servicios__content-icon2">
+        <a href="<?php echo get_bloginfo('url') ?>/formacion/#capacitacion" target="_blank">
         <svg width="242px" height="242px" viewBox="0 0 242 242" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                 <g id="1-Home" transform="translate(-994.000000, -4165.000000)">
@@ -33,8 +36,9 @@
                 </g>
             </g>
         </svg>
+        </a>
       </div>
-      <h3>CAPACITACIÓN Y FORMACIÓN</h3>
+      <h3><a href="<?php echo get_bloginfo('url') ?>/formacion/#capacitacion" target="_blank">CAPACITACIÓN Y FORMACIÓN</a></h3>
     </div>
     <div class="servicios__bottom">
       <h3>OTROS SERVICIOS</h3>
